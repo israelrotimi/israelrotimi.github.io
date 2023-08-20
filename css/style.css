@@ -10,9 +10,6 @@
 body{
     background-color: #efefef;
 }
-.wrapper {
-    background-color: var(--leafygreenlight);
-}
 button{
     background-color: var(--leafygreen);
     padding: 5px;
@@ -26,6 +23,17 @@ header{
     box-sizing: content-box;
     display: flexbox;
 }
+a{
+    color: black;
+}
+
+/* navigation */
+.navbar a .brand{
+    text-decoration: none;
+}
+.navbar .brand em{
+    color: var(--leafygreen);
+}
 nav{
     margin-bottom: 20px;
 }
@@ -33,9 +41,12 @@ nav ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    /* for responsive navbar */
+    display: flex;
 }
-nav ul li{
-    float: left;
+/* horizontal on desktop */
+.nav-desktop{
+    flex-direction: row;
 }
 nav ul a{
     display: block;
@@ -50,59 +61,41 @@ nav ul a:hover{
 .drop-content{
     display: none;
 }
-.bars{
-    /* display: block; */
-    width: 100%;
-    height: 10px;
-    background-color: #fff;
-    align-items: stretch;
+.nav-mobile{
+    display: none;
+}
+.nav-mobile li a{
+    background-color: #ddd;
+}
+.nav-mobile{
+    display: none;
+}
+.dropdown{
+    display: block;
+    position: relative;
+    background-color: #dddddd;
+}
+.drop-content{
+    display: none;
     position: absolute;
 }
-.bars.bar1{
-    top: 0%;
+.dropdown:hover .drop-content{
+    display: block;
 }
-.bars.bars2{
-    top: 50%;
-}
-.bars.bar3{
-    bottom: 0%;
-}
-.bars.bar1:hover{
-    transform: rotate(60deg);
-}
-.bars.bars2:hover{
-    transform: scale(0,0);
-}
-.bars.bar3:hover{
-    transform: rotate(-60deg);
-}
-
 @media screen and (max-width: 700px){
     .nav-desktop{
         display: none;
     }
-    .dropdown{
+    .nav-mobile{
         display: block;
+        cursor: pointer;
     }
-    .dropbtn{
-        display: block;
-        position: relative;
-        right: 10%;
-        width: 100px;
-        height: 50px;
-        overflow: hidden;
-    }
-    /* .dropdown{
-        display: block;
-        position: relative;
-        background-color: #dddddd;
-    } */
-    .drop-content{
+    .nav-mobile .menu{
+        flex-direction: column;
         display: none;
-        position: absolute;
     }
-    .dropdown:hover .drop-content{
-        display: block;
+    .nav-mobile .menu a:hover{
+        background-color: var(--leafygreenlight);
     }
 }
 
@@ -118,6 +111,9 @@ nav ul a:hover{
 }
 header h1{
    font-size: 50px;
+}
+header h1 em{
+    color: var(--leafygreen);
 }
 
 /* sections */
@@ -195,12 +191,18 @@ footer ul a:hover{
 .card{
     background-color: var(--leafygreen);
 }
+/* to show user which page he/she is on */
+.active{
+    background-color: var(--leafygreen) !important;
+}
+.active:hover{
+    background-color: var(--leafygreen) !important;
+}
 @media screen and (max-width: 700px) {
     .col{
         width: 90%;
     }
 }
-
 /* whatsapp button */
 .whatsapp-btn{
     text-align: center;
