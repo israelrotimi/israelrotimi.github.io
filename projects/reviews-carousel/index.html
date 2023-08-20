@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews carousel</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        .wrapper{
+            background-color: #badede;
+            text-align: center;
+        }
+        button{
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid aqua;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        button:active{
+            box-shadow: 2px 2px aqua;
+        }
+        #reviews{
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        #reviews img{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #badede;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Our Reviews</h1>
+        <div id="reviews">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="profile-photo">
+            <p>I like this product</p>
+        </div>
+        <button>next</button>
+    </div>
+
+    <script>
+        const reviews = [
+            "I like this product",
+            "I really like this product",
+            "Awesome customer service",
+            "I recommend them to anyone",
+            "Awesome creativity",
+            "Love the UI and the design"
+        ];
+        const sex = ["men","women"]
+        const num = Math.floor(Math.random()*2);
+        const review = document.getElementById("reviews");
+        const btn = document.querySelector("button");
+        btn.addEventListener("click", newReview);
+        function newReview(){
+            review.innerHTML = `<img src="https://randomuser.me/api/portraits/${sex[num]}/${Math.floor(Math
+                .random()*100)}.jpg" alt="profile-photo">
+            <p>${reviews[Math.floor(Math.random()*reviews.length)]}</p>`;
+            
+                console.log(review.innerHTML)
+
+        }
+    </script>
+</body>
+</html>

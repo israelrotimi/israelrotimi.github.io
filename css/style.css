@@ -1,0 +1,210 @@
+:root{
+    --leafygreen: #48C9B0;
+    --leafygreenmedium: #6ad2bd;
+    --leafygreenlight: #97d0c5;
+}
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+body{
+    background-color: #efefef;
+}
+.wrapper {
+    background-color: var(--leafygreenlight);
+}
+button{
+    background-color: var(--leafygreen);
+    padding: 5px;
+    border-style: solid;
+    border-color: transparent;
+}
+button:active{
+    border-color: #297062;
+}
+header{
+    box-sizing: content-box;
+    display: flexbox;
+}
+nav{
+    margin-bottom: 20px;
+}
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    float: left;
+}
+nav ul a{
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    text-decoration: none;
+    color: black;
+}
+nav ul a:hover{
+    background-color: var(--leafygreenlight);
+}
+.drop-content{
+    display: none;
+}
+.bars{
+    /* display: block; */
+    width: 100%;
+    height: 10px;
+    background-color: #fff;
+    align-items: stretch;
+    position: absolute;
+}
+.bars.bar1{
+    top: 0%;
+}
+.bars.bars2{
+    top: 50%;
+}
+.bars.bar3{
+    bottom: 0%;
+}
+.bars.bar1:hover{
+    transform: rotate(60deg);
+}
+.bars.bars2:hover{
+    transform: scale(0,0);
+}
+.bars.bar3:hover{
+    transform: rotate(-60deg);
+}
+
+@media screen and (max-width: 700px){
+    .nav-desktop{
+        display: none;
+    }
+    .dropdown{
+        display: block;
+    }
+    .dropbtn{
+        display: block;
+        position: relative;
+        right: 10%;
+        width: 100px;
+        height: 50px;
+        overflow: hidden;
+    }
+    /* .dropdown{
+        display: block;
+        position: relative;
+        background-color: #dddddd;
+    } */
+    .drop-content{
+        display: none;
+        position: absolute;
+    }
+    .dropdown:hover .drop-content{
+        display: block;
+    }
+}
+
+/* header section */
+.heading{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.heading img{
+    width: 45%;
+}
+header h1{
+   font-size: 50px;
+}
+
+/* sections */
+section{
+    background-color: var(--leafygreenmedium);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+.about{
+    display: grid;
+
+}
+.skills{
+    display: grid;
+}
+.projects .grid-container{
+    display: grid;
+    grid-auto-flow: row;
+}
+.projects .grid-container .items{
+    width: 10%;
+    overflow: hidden;
+}
+.projects .grid-container .item img{
+    width: 90%;
+}
+.projects .grid-container .item{
+    height: 500px;
+    overflow-y: auto;
+}
+/* footer */
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    background-color: var(--leafygreenmedium);
+}
+footer .col{
+    margin: 10px;
+}
+footer .col:last-child ul{
+    display: flex;
+    /* justify-content: space-between; */
+}
+footer .col:last-child ul li{
+    margin-right: 10px;
+}
+footer ul{
+    list-style-type: none;
+}
+footer ul a{
+    text-decoration: none;
+    color: black;
+}
+footer ul a:hover{
+    text-decoration: underline;
+    color: black;
+}
+/* utilities */
+.text-center{
+    text-align: center;
+    align-items: center;
+}
+.btn{
+    background-color: var(--leafygreenmedium);
+    padding: 10px;
+    border-radius: 10px;
+}
+.col{
+    width: 30%;
+}
+.card{
+    background-color: var(--leafygreen);
+}
+@media screen and (max-width: 700px) {
+    .col{
+        width: 90%;
+    }
+}
+
+/* whatsapp button */
+.whatsapp-btn{
+    text-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: var(--leafygreen);
+}

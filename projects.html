@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>ISRAEL ROTIMI - WEB DEVELOPER PORTFOLIO</title>
+    <style>
+        h1{
+            font-variant: small-caps;
+        }
+        i{
+            font-size: xx-large !important;
+        }
+        a{
+            scroll-behavior: smooth;
+        }
+        img[class="card-img-top"]{
+            align-self: center;
+            width: 50%;
+            border: 1px solid black;
+        }
+        a .card{
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <h2 class="brand">Web <em>Designer</em></h2>
+        <ul class="nav-desktop">
+            <li><a href="index.html">home</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="skills.html">skills</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="../resume/resume.html" target="_blank">resume</a></li>
+        </ul>
+        <div class="dropdown">
+            <div class="dropbtn">
+                <span class="bars bar1"></span>
+                <span class="bars bar2"></span>
+                <span class="bars bar3"></span>
+            </div>
+            <ul class="drop-content">
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="skills.html">skills</a></li>
+                <li><a href="projects.html">projects</a></li>
+                <li><a href="../resume/resume.html">resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- <a href="#contact" class="bg-secondary p-3 m-4 align-items-center">Contact Me</a> -->
+            
+    <div class="container">
+        <div class="text-center">
+            <h1 class="display-1">Israel Rotimi</h1>
+            <h1 class="display-5">The web Designer, Web Developer and Game Developer</h1>
+        </div>
+        <br><br>
+        <div class="text-center">
+            <p>The following are my projects made with html, css, JavaScript etc.</p>
+            <hr>
+        </div>
+        <div class="container card-cont">
+            <!-- <div class="card text-center">
+              <img class="card-img-top" src="images/" alt="Title">
+              <div class="card-body">
+                <h4 class="card-title">Title</h4>
+                <p class="card-text">Body</p>
+              </div>
+            </div> -->
+
+            <div class="card  text-center">
+              <img class="card-img-top" src="images/temple.png" alt="Temple Dwellers">
+              <div class="card-body">
+                <h4 class="card-title">Temple Dwellers</h4>
+                <p class="card-text">This is a single page website which can play and download songs. I did for a client. I used jquery and bootstrap. </p>
+                <!-- <a href="http://templedwellers.com.ng" target="_blank">www.templedwellers.com.ng</a>             -->
+              </div>
+            </div>
+        </div> 
+        <br><br>
+        <h5 class="text-center" id="contact">Please check out my social media pages:</h5><br>
+        <hr>
+        <div class="text-center">
+            <a href="http://github.com/israel-rotimi"><i class="bi-github"></i></a>
+            <!-- <a href="http://linkedin.com/israel-rotimi"><i class="bi-linkedin"></i></a> -->
+        </div>
+        <h5 class="text-center">You can reach me at:</h5><br>
+        <div class="text-center"><a href="mailto:izzyrotimi@gmail.com"><i class="bi-envelope"></i>izzyrotimi@gmail.com</a> or <a href="tel:+2348054853994"><i class="bi-whatsapp"></i> & <i class="bi-telephone"></i> 08054853994</a></div>
+        
+    </div>
+    <script>
+        const projects = [
+            {
+                name: "Klasic Konzept",
+                imgsrc: "klasic",
+                description: "This is an app I made while learning web design. It was made from a template with a different theme.",
+                link: ""
+            },
+            {
+                name: "The elf and the dragon",
+                imgsrc: "elf",
+                description: "This is an animation I made with scratch.",
+                link: ""
+            },
+            {
+                name: "Double Pong ",
+                imgsrc: "pong",
+                description: "This is a game I made with scratch. I converted it to html.",
+                link: ""
+            },
+            {
+                name: "Deluxe Furnitures",
+                imgsrc: "deluxe-furnitures",
+                description: "This is a website made with just html and css.",
+                link: ""
+            },
+            {
+                name: "Loan Calculator",
+                imgsrc: "loan-calculator",
+                description: "This is an app I made while learning JavaScript. The UI was made with bootstrap.",
+                link: ""
+            },
+            {               
+                name: "Task List",
+                imgsrc: "task-list",
+                description: "This is an app I made while learning JavaScript. You can add tasks, filter the list of tasks you added and delete tasks. If you close the browser window your data is not gone. This app depends on DOM manipulation and local browser storage. The UI was made with materialize",
+                link: "materializecss.com"
+            },
+            {               
+                name: "Number Guesser",
+                imgsrc: "number-guesser",
+                description: "This is a number game I made while learning JavaScript. The UI was made with skeleton",
+                link: "skeleton"
+            },
+            {               
+                name: "Book List",
+                imgsrc: "book-list",
+                description: "This is an app I made while learning JavaScript. It examplifies the concept of objects, I have a version made with es5 prototypes and es6 classes. The UI was made with skeleton",
+                link: "skeleton"
+            },
+            {               
+                name: "Inrad Spices",
+                imgsrc: "inrad-spices",
+                description: "This is a static website made with UIkit and html",
+                link: "skeleton"
+            },
+            {
+                name: "Form validation",
+                imgsrc: "form-validation",
+                description: "This is an app I made after learning regular expressions in JavaScript.",
+                link: ""
+            },
+            {
+                name: "Profile Scroller",
+                imgsrc: "profile-scroller",
+                description: "This is a min app that can be part of a chat system. It uses es6 generators to scroll through profiles in the system.",
+                link: ""
+            },
+            {
+                name: "Calorie tracker app",
+                imgsrc: "calorie",
+                description: "This app was is a really large project made with vanilla JavaScript. You can add items, edit, and delete items and the calorie counter updates automatically.",
+                link: ""
+            },
+            {
+                name: "Precious Pastries",
+                imgsrc: "precious-pastries",
+                description: "This is a pastry delivery website. UI was made with bootstrap",
+                link: ""
+            }
+        ];
+
+        //App starts here
+        const container = document.querySelector(".card-cont");
+        projects.forEach((project) => {
+            if (project.link !== "") {
+                container.innerHTML += `
+                    <a href="projects/${project.link}/index.html">
+                        <div class="card  text-center">
+                        <img class="card-img-top" src="images/${project.imgsrc}.png" alt="${project.name}">
+                        <div class="card-body">
+                            <h4 class="card-title">${project.name}</h4>
+                            <p class="card-text">${project.description}</p>
+                        </div>
+                        </div>
+                    </a>`;
+            } else {
+                container.innerHTML += `
+                    <div class="card  text-center">
+                    <img class="card-img-top" src="images/${project.imgsrc}.png" alt="${project.name}">
+                        <div class="card-body">
+                            <h4 class="card-title">${project.name}</h4>
+                            <p class="card-text">${project.description}</p>
+                        </div>
+                    </div>`;
+            }
+            
+            
+        });
+    </script>
+</body>
+</html>
