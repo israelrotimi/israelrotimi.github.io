@@ -1,7 +1,6 @@
 :root{
-    --leafygreen: #48C9B0;
-    --leafygreenmedium: #6ad2bd;
-    --leafygreenlight: #97d0c5;
+    --purple: #9254ef;
+    ----blue: #46bf25;
 }
 *{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
