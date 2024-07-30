@@ -1,0 +1,168 @@
+/* styles.css */
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #6482AD;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero-section {
+    background-color: #7FA1C3;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.about-section {
+    padding: 40px 20px;
+}
+
+.projects-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.project-card {
+    background-color: #E2DAD6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.youtube-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.youtube-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.project-card:hover .youtube-wrapper iframe {
+    pointer-events: auto;
+}
+
+.contact-section {
+    padding: 40px 20px;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section form label {
+    margin-top: 10px;
+}
+
+.contact-section form input, 
+.contact-section form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.contact-section form button {
+    padding: 10px;
+    background-color: #6482AD;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-section form button:hover {
+    background-color: #556fa1;
+}
+
+.social-media-links a {
+    margin-right: 10px;
+    color: #6482AD;
+    text-decoration: none;
+}
+
+.social-media-links a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #7FA1C3;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #6482AD;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
